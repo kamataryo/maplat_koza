@@ -1,0 +1,33 @@
+{
+  "app_name": "古座",
+  "fake_gps": false,
+  "fake_center": "古座",
+  "fake_radius": 10,
+  "home_position": [135.821305, 33.519444],
+  "default_zoom": 17,
+  "sources": [
+    {
+      "mapID": "koza",
+      "label": "古座"
+    },
+    "gsi",
+    "osm"
+  ],
+  "pois": [
+    {
+      "name": "第五福竜丸の地",
+      "lat": 33.51486,
+      "lng": 135.824681,
+      "address": "和歌山県東牟婁郡串本町西向",
+      "desc": "第五福竜丸の地です。",
+      "image": "daigo_fukuryu_maru.jpg"
+    },
+    {
+      "name": "古座川",
+      "lat": 33.517383,
+      "lng": 135.825283,
+      "address": "東牟婁郡串本町古座",
+      "url": "https://ja.m.wikipedia.org/wiki/%E5%8F%A4%E5%BA%A7%E5%B7%9D"
+    }
+  ]
+}

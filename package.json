@@ -1,0 +1,10 @@
+{
+  "name": "maplat_koza",
+  "version": "0.0.0",
+  "scripts": {
+    "build": "r.js -o rjs_config.js"
+  },
+  "dependencies": {
+    "requirejs": "^2.3.5"
+  }
+}
