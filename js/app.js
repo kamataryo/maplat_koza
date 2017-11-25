@@ -392,17 +392,6 @@ define(['aigle', 'histmap', 'sprintf', 'i18n', 'i18nxhr', 'swiper', 'bootstrap']
                     }
                 });
 
-                // デフォルトで古座マップを表示させるやっつけなカスタマイズ
-                setTimeout(() => {
-                  app.cacheHash['koza:maplat:tin'].merc_zoom =
-                    app.appData.default_zoom
-                  app.changeMap('koza:maplat:tin')
-                  const mask = document.getElementById('custom_mask')
-                  setTimeout(() => {
-                    mask.parentNode.removeChild(mask)
-                  }, 500)
-                }, 500)
-
                 app.mapDivDocument.querySelector('.map-title').addEventListener('click', function() {
                     var from = app.mapObject.getSource();
 
@@ -713,6 +702,17 @@ define(['aigle', 'histmap', 'sprintf', 'i18n', 'i18nxhr', 'swiper', 'bootstrap']
                         app.mapObject.setOpacity(app.sliderCommon.get(evt.key) * 100);
                     }
                 });
+                
+                // デフォルトで古座マップを表示させるやっつけなカスタマイズ
+                setTimeout(() => {
+                  app.cacheHash['koza:maplat:tin'].merc_zoom =
+                    app.appData.default_zoom
+                  app.changeMap('koza:maplat:tin')
+                  const mask = document.getElementById('custom_mask')
+                  setTimeout(() => {
+                    mask.parentNode.removeChild(mask)
+                  }, 100)
+                }, 500)
             });
         });
     };
