@@ -7,9 +7,19 @@
   <meta content="yes" name="apple-mobile-web-app-capable">
   <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
   <link rel="stylesheet" href="css/app.css">
+  <style>
+    .custom-mask {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      background-color: white;
+      z-index: 100000000;
+    }
+  </style>
 </head>
 
 <body>
+  <div id="custom_mask" class="custom-mask"></div>
   <div class="container-fluid h100p w100p">
     <div class="row-fluid h100p">
       <div class="row-fluid mainview">
@@ -21,19 +31,19 @@
 <script src="js/maplat.js"></script>
 <script>
   var option = {}
-  var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&')
+  var hashes = window.location.href
+    .slice(window.location.href.indexOf('?') + 1)
+    .split('&')
   for (var i = 0; i < hashes.length; i++) {
     hash = hashes[i].split('=')
     option[hash[0]] = hash[1]
   }
 
-  Maplat
-    .createObject(option)
-    .then(function(app) {
-      app.addEventListener('clickPoi', function(evt) {
-        console.log(evt)
-      })
+  Maplat.createObject(option).then(function(app) {
+    app.addEventListener('clickPoi', function(evt) {
+      console.log(evt)
     })
+  })
 </script>
 
 </html>
