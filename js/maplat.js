@@ -101944,7 +101944,6 @@ define('app',['aigle', 'histmap', 'sprintf', 'i18n', 'i18nxhr', 'swiper', 'boots
                     var mapInfoModal = new bsn.Modal(mapInfoModalElm);
                     mapInfoModal.show();
                 });
-
             }
 
             app.mercBuffer = null;
@@ -102233,9 +102232,9 @@ define('app',['aigle', 'histmap', 'sprintf', 'i18n', 'i18nxhr', 'swiper', 'boots
                 
                 // デフォルトで古座マップを表示させるやっつけなカスタマイズ
                 setTimeout(() => {
-                  app.cacheHash['koza:maplat:tin'].merc_zoom =
+                  app.cacheHash['koza2:maplat:tin'].merc_zoom =
                     app.appData.default_zoom
-                  app.changeMap('koza:maplat:tin')
+                  app.changeMap('koza2:maplat:tin')
                   const mask = document.getElementById('custom_mask')
                   setTimeout(() => {
                     mask.parentNode.removeChild(mask)

@@ -39,7 +39,7 @@ Maplat では、複数の地図の集まりを「アプリ」として定義で�
   "default_zoom": 17,
   "sources": [
     {
-      "mapID": "koza",
+      "mapID": "koza2",
       "label": "古座"
     },
     "gsi",

@@ -7,8 +7,8 @@
   "default_zoom": 17,
   "sources": [
     {
-      "mapID": "koza",
-      "label": "古座"
+      "mapID": "koza2",
+      "label": "古座街道"
     },
     "gsi",
     "osm"
